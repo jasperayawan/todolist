@@ -48,6 +48,7 @@ const TodoForm = ({ onAddTodo } : TodoFormProps) => {
             setDate(undefined)
             setPriority("medium")
         }
+        
     }
 
     // const handleAddCategory = () => {
@@ -70,12 +71,14 @@ const TodoForm = ({ onAddTodo } : TodoFormProps) => {
         <div className="flex gap-2">
             <input 
                 type='text'
+                value={text}
+                onChange={(e) => setText(e.target.value)}
                 placeholder="What needs to be done?"
                 className='border flex-1 w-full px-4 py-1 rounded-md'
             />
-            <button type='submit' className='bg-black text-white px-2 rounded cursor-pointer'>
+            <Button type='submit' className='cursor-pointer'>
                 <PlusCircle className='h-4 w-4'/>
-            </button>
+            </Button>
         </div>
         <div className="flex gap-2">
             <Popover>
