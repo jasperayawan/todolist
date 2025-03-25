@@ -5,6 +5,8 @@ import Card from './card'
 import CardContent from './card-content'
 import TodoForm from './todo-form'
 
+export type Priority = 'low' | 'medium' | 'high'
+
 const TodoList = () => {
   return (
     <Card>
